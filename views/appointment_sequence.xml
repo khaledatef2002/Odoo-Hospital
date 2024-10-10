@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <record id="appointments_sequence" model="ir.sequence">
+            <field name="name">Appointments Sequence</field>
+            <field name="code">hospital.appointments.sequence</field>
+            <field name="prefix">#APP</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False" />
+        </record>
+    </data>
+</odoo>

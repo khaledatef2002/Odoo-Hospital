@@ -1,0 +1,12 @@
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="hospital_root" name="Hospital"/>
+    <!-- Resources Menu -->
+    <menuitem id="resource_menu" name="Hospital Resources" parent="hospital_root" sequence="0"/>
+    <menuitem id="hospital_doctor" name="Doctor" parent="resource_menu" action="my_hospital.open_doctors_window_action" />
+    <menuitem id="hospital_patient" name="Patient" parent="resource_menu" action="my_hospital.open_patient_window_action"/>
+    <menuitem id="hospital_medicines" name="Medicine" parent="resource_menu" action="my_hospital.open_medicines_window_action" />
+    <!-- Transactions Menu -->
+    <menuitem id="transactions_menu" name="Hospital Transactions" parent="hospital_root" sequence="1"/>
+    <menuitem id="hospital_appointment" name="Appointment" parent="transactions_menu" action="my_hospital.open_appointments_window" />
+</odoo>

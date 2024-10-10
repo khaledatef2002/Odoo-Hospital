@@ -1,0 +1,26 @@
+<odoo>
+    <record model="ir.ui.view" id="adding_is_doctor">
+        <field name="name">Adding is doctor</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='login']" position="after">
+                <group>
+                    <field name="is_doctor" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="adding_is_doctor_to_simple_form">
+        <field name="name">Adding is doctor to simple form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_simple_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='login']" position="after">
+                <group>
+                    <field name="is_doctor" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

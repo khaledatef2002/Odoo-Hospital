@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="prescription_form_view" model="ir.ui.view">
+            <field name="name">Prescription Form</field>
+            <field name="model">hospital.prescription</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="medicine_id" />
+                        </group>
+                        <group>
+                            <field name="notes" />
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="prescription_tree_view" model="ir.ui.view">
+            <field name="name">Prescription Tree</field>
+            <field name="model">hospital.prescription</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="medicine_id" />
+                    <field name="notes" />
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

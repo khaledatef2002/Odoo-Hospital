@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="medicine_01" model="hospital.medicines">
+            <field name="name">medicine 01</field>
+            <field name="effective_material">x01</field>
+        </record>
+        <record id="medicine_02" model="hospital.medicines">
+            <field name="name">medicine 02</field>
+            <field name="effective_material">x02</field>
+        </record>
+        <record id="medicine_03" model="hospital.medicines">
+            <field name="name">medicine 03</field>
+            <field name="effective_material">x03</field>
+        </record>
+    </data>
+</odoo>

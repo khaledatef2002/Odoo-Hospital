@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <record id="contacts_patient_info_form" model="ir.ui.view">
+      <field name="name">Contacts Patient Info</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//form//sheet" position="before">
+          <header>
+            <button name="my_hospital.add_appointment_wizard_action" string="Add Appointment"
+                    context="{'default_patient_id': active_id, 'default_doctor_id': uid}"
+                    type="action" class="btn-primary" />
+          </header>
+        </xpath>
+        <xpath expr="//div[@name='button_box']" position="inside">
+          <button name="get_appointments"
+                  type="object"
+                  class="oe_stat_button"
+                  icon="fa-solid fa-calendar"
+                  string="Appointments"
+                  sequence="1"
+                  invisible="is_patient == False">
+            <field string="Appointments" name="app_count" widget="statinfo" />
+          </button>
+        </xpath>
+        <xpath expr="//field[@name='vat']" position="after">
+          <field name="birthdate" />
+          <field name="age" />
+          <field name="is_patient" />
+        </xpath>
+      </field>
+    </record>
+
+    <record id="contacts_patient_info_tree" model="ir.ui.view">
+      <field name="name">Contacts Patient Info Tree</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_tree" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='display_name']" position="after">
+          <field name="age" />
+          <field name="birthdate" />
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

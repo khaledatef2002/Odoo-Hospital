@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="doctors_appointment_rules" model="ir.rule">
+            <field name="name">Doctors Appointment Rules</field>
+            <field name="model_id" ref="model_hospital_appointments" />
+            <field name="domain_force">
+                [('doctor_id.id', '=', user.id)]
+            </field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+            <field name="perm_unlink" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_create" eval="True" />
+        </record>
+    </data>
+</odoo>

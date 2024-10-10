@@ -1,0 +1,13 @@
+<odoo>
+    <record model="ir.actions.act_window" id="my_hospital.open_patient_window_action">
+        <field name="name">Open Patient Window Action</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[('is_patient', '=', True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Patient Records Exists.
+            </p>
+        </field>
+    </record>
+</odoo>
