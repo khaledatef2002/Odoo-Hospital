@@ -27,9 +27,5 @@
         'views/prescription_view.xml',
         'views/medicines_view.xml'
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
 }
 
